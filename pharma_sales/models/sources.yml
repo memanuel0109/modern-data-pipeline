@@ -5,4 +5,7 @@ sources:
     database: sales_db
     schema: main
     tables:
+      - name: sales_daily
+      - name: sales_hourly
       - name: sales_monthly
+      - name: sales_weekly
