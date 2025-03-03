@@ -4,7 +4,7 @@ import duckdb
 conn = duckdb.connect('pharma_sales/sales_db.duckdb')
 
 # verify that the data has been loaded
-result = conn.execute("SELECT * FROM public.my_first_dbt_model LIMIT 1").fetchall()
+result = conn.execute("SELECT * FROM public.records_by_doy").fetchall()
 print(result)
 
 # Close the connection
