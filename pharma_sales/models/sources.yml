@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: sales_source
+    database: sales_db
+    schema: main
+    tables:
+      - name: sales_monthly
