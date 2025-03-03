@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  
+  - name: records_by_doy
+    description: "Record counts by day of week"
+    columns:
+      - name: weekday_name
+        description: "Weekday name"
+        tests:
+          - not_null
+          - unique
+          - accepted_values:
+              values: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+              severity: warn
+
+  - name: antihistamine_sales_by_month
+    description: "Antihistamine sales by month"
+    columns:
+      - name: antihitamine_sales
+        description: "Sales for antihistamines"
+        tests:
+          - dbt_utils.accepted_range:
+              min_value: 0
+              
